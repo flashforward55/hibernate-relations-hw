@@ -3,8 +3,12 @@
         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cinema?serverTimezone=UTC</property>
+        <property name="hibernate.connection.driver_class">
+            com.mysql.cj.jdbc.Driver
+        </property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://localhost:3306/cinema_relations?serverTimezone=UTC
+        </property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">WailWay-Pass456</property>
 
@@ -15,6 +19,8 @@
 
         <property name="hibernate.hbm2ddl.auto">create-drop</property>
 
-        <mapping class="mate.academy.model.Movie"/>
+        <mapping class="mate.academy.hibernate.relations.model.Country"/>
+        <mapping class="mate.academy.hibernate.relations.model.Actor"/>
+        <mapping class="mate.academy.hibernate.relations.model.Movie"/>
     </session-factory>
 </hibernate-configuration>
